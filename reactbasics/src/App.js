@@ -1,16 +1,14 @@
-import React from "react";
-import Header from "./components/Header";
-import Body from "./components/Body";
-import Footer from "./components/Footer";
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Body />
-        <Footer />
-      </div>
-    );
-  }
+import Header from "./FirstPage/Header";
+import Body from "./FirstPage/Body";
+import Footer from "./FirstPage/Footer";
+function App() {
+  return (
+    <div>
+      <Header />
+      <hr />
+      <Body />
+      <Footer />
+    </div>
+  );
 }
 export default App;
