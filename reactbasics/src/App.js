@@ -1,14 +1,11 @@
-import Header from "./FirstPage/Header";
-import Body from "./FirstPage/Body";
-import Footer from "./FirstPage/Footer";
-function App() {
-  return (
-    <div>
-      <Header />
-      <hr />
-      <Body />
-      <Footer />
-    </div>
-  );
+import React from "react";
+import Header from "./PropsExampleone/Header";
+class App extends React.Component {
+  render() {
+    return <>
+        <Header/>
+    </>;
+  }
 }
+
 export default App;
