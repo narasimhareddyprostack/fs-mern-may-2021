@@ -4,7 +4,7 @@ class Hike extends Component {
   state = {
     salaryHike: 0,
   };
-  
+
   render() {
     return (
       <div>

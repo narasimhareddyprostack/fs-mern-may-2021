@@ -1,15 +1,18 @@
-import React from "react";
-import Navbar from "./EventHandling/Navbar";
-import Message from "./EventHandling/Message";
-import Hike from "./EventHandling/Hike";
-function App() {
-  return (
-    <div>
-      <Navbar />
-      <Message />
-      <Hike />
-    </div>
-  );
+import React, { Component } from "react";
+import Navbar from "./EventHandlingBinding/Navbar";
+import Message from "./EventHandlingBinding/Message";
+import Hike from "./EventHandlingBinding/Hike";
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <Message />
+        <Hike />
+      </div>
+    );
+  }
 }
 
 export default App;
