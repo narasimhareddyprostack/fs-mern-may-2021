@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import Navbar from "./EventHandlingBinding/Navbar";
-import Message from "./EventHandlingBinding/Message";
-import Hike from "./EventHandlingBinding/Hike";
-
+import Login from "./Forms/Login";
+import SMSApp from "./Forms/SMSApp";
 class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-        <Message />
-        <Hike />
+        <nav className="navbar navbar-dark bg-dark">
+          <a className="navbar-brand" href="/">
+            React Form Handling
+          </a>
+        </nav>
+        {/* <Login /> */}
+        <SMSApp />
       </div>
     );
   }
