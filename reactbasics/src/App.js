@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import Login from "./Forms/Login";
-import SMSApp from "./Forms/SMSApp";
+/* import Login from "./Forms/Login";
+/* import SMSApp from "./Forms/SMSApp"; */
+/* import ShowPassword from "./Forms/ShowPassword"; */
+import Registration from "./Forms/Registration";
 class App extends Component {
   render() {
     return (
@@ -10,8 +12,10 @@ class App extends Component {
             React Form Handling
           </a>
         </nav>
-        {/* <Login /> */}
-        <SMSApp />
+        {/*  <Login /> */}
+        {/*  <SMSApp /> */}
+        {/* <ShowPassword /> */}
+        <Registration />
       </div>
     );
   }

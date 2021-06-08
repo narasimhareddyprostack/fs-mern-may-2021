@@ -5,12 +5,22 @@ class Login extends Component {
     email: "",
     password: "",
   };
-  emailHandler = (event) => {
+  /*  emailHandler = (event) => {
     console.log(event.target.value);
     this.setState({ email: event.target.value });
   };
   passwordHandler = (event) => {
     this.setState({ password: event.target.value });
+  }; */
+
+  updateState = (event) => {
+    /*  console.log(event.target);
+    console.log(event.target.name); */
+    this.setState({ [event.target.name]: event.target.value });
+  };
+  loginHandler = (event) => {
+    console.log(this.state.email, "....", this.state.password);
+    event.preventDefault();
   };
   render() {
     return (
@@ -24,14 +34,14 @@ class Login extends Component {
                   <pre>{JSON.stringify(this.state)}</pre>
                 </div>
                 <div className="card-body">
-                  <form>
+                  <form onSubmit={this.loginHandler}>
                     <div className="form-group">
                       <input
                         type="text"
                         placeholder="email"
                         className="form-control"
-                        onChange={this.emailHandler}
-                        name="user_Email"
+                        onChange={this.updateState}
+                        name="email"
                       />
                     </div>
                     <div className="form-group">
@@ -39,7 +49,8 @@ class Login extends Component {
                         type="password"
                         placeholder="Password"
                         className="form-control"
-                        onChange={this.passwordHandler}
+                        onChange={this.updateState}
+                        name="password"
                       />
                     </div>
                     <div>
