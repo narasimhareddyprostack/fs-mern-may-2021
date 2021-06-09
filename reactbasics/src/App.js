@@ -1,21 +1,16 @@
 import React, { Component } from "react";
-/* import Login from "./Forms/Login";
-/* import SMSApp from "./Forms/SMSApp"; */
-/* import ShowPassword from "./Forms/ShowPassword"; */
-import Registration from "./Forms/Registration";
+import Employee from "./EmployeeData/Employee";
+
 class App extends Component {
   render() {
     return (
       <div>
         <nav className="navbar navbar-dark bg-dark">
           <a className="navbar-brand" href="/">
-            React Form Handling
+            React - Employee Data
           </a>
         </nav>
-        {/*  <Login /> */}
-        {/*  <SMSApp /> */}
-        {/* <ShowPassword /> */}
-        <Registration />
+        <Employee />
       </div>
     );
   }
