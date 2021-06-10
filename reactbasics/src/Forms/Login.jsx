@@ -42,6 +42,7 @@ class Login extends Component {
                         className="form-control"
                         onChange={this.updateState}
                         name="email"
+                        required
                       />
                     </div>
                     <div className="form-group">

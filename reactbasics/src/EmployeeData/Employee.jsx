@@ -14,9 +14,10 @@ export class Employee extends Component {
         <div className="container mt-4">
           <div className="row">
             <div className="col-md-10">
-              <table class="table table-hover">
+              <table className="table table-hover">
                 <thead>
                   <tr>
+                    <th scope="col">Array Index</th>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
                     <th scope="col">City</th>
@@ -24,9 +25,10 @@ export class Employee extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.employee.map((emp) => {
+                  {this.state.employee.map((emp, index) => {
                     return (
-                      <tr>
+                      <tr key={index}>
+                        <td>{index}</td>
                         <td>{emp.login.uuid.slice(32, 36)}</td>
                         <td>
                           {emp.name.first} {emp.name.last}

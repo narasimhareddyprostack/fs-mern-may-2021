@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Employee from "./EmployeeData/Employee";
-
+import UseLogin from "./Rendering/UserLogin";
+import ProductItem from "./ProductCounter/ProductItem";
 class App extends Component {
   render() {
     return (
@@ -10,7 +11,9 @@ class App extends Component {
             React - Employee Data
           </a>
         </nav>
-        <Employee />
+        <ProductItem />
+        {/*   <Employee /> */}
+        {/*  <UseLogin /> */}
       </div>
     );
   }
