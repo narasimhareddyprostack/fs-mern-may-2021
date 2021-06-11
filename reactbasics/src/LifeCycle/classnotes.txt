@@ -1,0 +1,34 @@
+React JS -->Library. Not a framework 
+            Focus on UI. 
+			
+Angular  -->Framework (complete app development sol)
+
+Application --> UI Design, Dynamic && HTTP , Routing 
+
+Framework --> will provide complete appl development sol.
+
+React Eco System --- HTTP(Axios), Routing(React-Router-DOM)
+                     Best Option are available. 
+			 		 
+fetch API  vs AXIOS  - consuming REST API.
+
+How to invoke HTTP API in React?
+AXIOS - Performing HTTP Operation.
+        - get,post,delete, put, patch, trace(testnig)
+
+fetch data from the server ?  side effect 
+
+React Component Life Cycle Method
+----------------------------------
+Class Test extends R.C{
+ 1.constructor(){}    
+ 2.rendner()    - display UI
+ 3.componentDidMount() -    berth: fetch data from server
+	...
+ 4.componetWillUnMount() -  death
+ }
+ 
+ 
+ 
+ setInterval(()=>{}, 1000)
+ clearInterval()

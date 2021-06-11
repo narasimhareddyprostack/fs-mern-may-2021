@@ -1,17 +1,20 @@
 import React, { Component } from "react";
-import Employee from "./EmployeeData/Employee";
+/* import Employee from "./EmployeeData/Employee";
 import UseLogin from "./Rendering/UserLogin";
 import ProductItem from "./ProductCounter/ProductItem";
+ */
+import DigitalWatch from "./LifeCycle/DigitalWatch";
 class App extends Component {
   render() {
     return (
       <div>
         <nav className="navbar navbar-dark bg-dark">
           <a className="navbar-brand" href="/">
-            React - Employee Data
+            React - Component Life Cycle Method - Class
           </a>
         </nav>
-        <ProductItem />
+        <DigitalWatch />
+        {/* <ProductItem />
         {/*   <Employee /> */}
         {/*  <UseLogin /> */}
       </div>
