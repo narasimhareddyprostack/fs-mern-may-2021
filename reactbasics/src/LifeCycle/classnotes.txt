@@ -16,13 +16,13 @@ How to invoke HTTP API in React?
 AXIOS - Performing HTTP Operation.
         - get,post,delete, put, patch, trace(testnig)
 
-fetch data from the server ?  side effect 
+fetch data from the server ?  side effect
 
 React Component Life Cycle Method
 ----------------------------------
 Class Test extends R.C{
  1.constructor(){}    
- 2.rendner()    - display UI
+ 2.rendner()    -           display UI
  3.componentDidMount() -    berth: fetch data from server
 	...
  4.componetWillUnMount() -  death
