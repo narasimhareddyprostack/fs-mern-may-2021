@@ -2,22 +2,29 @@ import React, { Component } from "react";
 
 export default class DigitalWatch extends Component {
   constructor(props) {
+    console.log("First Constructor Will execute");
     super(props);
     this.state = {
       currentTime: new Date().toLocaleTimeString(),
     };
   }
+  /*  componentDidCatch() {}
+  componentDidUpdate() {}
+  componentWillReceiveProps() {} */
   componentDidMount() {
-    setInterval(() => {
+    console.log("After Render Method - comp Did Mount");
+    this.currentTimer = setInterval(() => {
       this.setState({
         currentTime: new Date().toLocaleTimeString(),
       });
     }, 1000);
   }
   componentWillUnmount() {
-    console.log("..... Destroy");
+    console.log("Fouth.... Destroy Time");
+    clearInterval(this.currentTimer);
   }
   render() {
+    console.log("Second - Render Method");
     return (
       <>
         <div className="container mt-4">

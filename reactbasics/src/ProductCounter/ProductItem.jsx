@@ -52,6 +52,7 @@ export class ProductItem extends Component {
                         src={this.state.product.image}
                         width="50"
                         height="50"
+                        alt="iphone"
                       />
                     </td>
                     <td>
