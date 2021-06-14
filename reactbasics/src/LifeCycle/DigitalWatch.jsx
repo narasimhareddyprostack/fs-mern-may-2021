@@ -8,11 +8,9 @@ export default class DigitalWatch extends Component {
       currentTime: new Date().toLocaleTimeString(),
     };
   }
-  /*  componentDidCatch() {}
-  componentDidUpdate() {}
-  componentWillReceiveProps() {} */
+
   componentDidMount() {
-    console.log("After Render Method - comp Did Mount");
+    console.log("After Render Method - comp Did Mount - Third");
     this.currentTimer = setInterval(() => {
       this.setState({
         currentTime: new Date().toLocaleTimeString(),

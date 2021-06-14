@@ -1,19 +1,15 @@
 import React, { Component } from "react";
-import Navbar from "./LifeCycle/Navbar";
-import ProductCounter from "./ProductCounter/ProductItem";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import DigitalWatch from "./LifeCycle/DigitalWatch";
+import Navbar from "./Navbar/Navbar";
+import UserList from "./ContactApp/UserList";
+import Product from "./ContactApp/Product";
 class App extends Component {
   render() {
     return (
       <div>
-        <Router>
-          <Navbar />
-          <Switch>
-            <Route path="/digital" exact component={DigitalWatch}></Route>
-            <Route path="/counter" exact component={ProductCounter}></Route>
-          </Switch>
-        </Router>
+        <Navbar />
+        <UserList />
+        <hr />
+        <Product />
       </div>
     );
   }
