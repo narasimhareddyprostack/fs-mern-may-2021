@@ -1,15 +1,12 @@
 import React, { Component } from "react";
-import Navbar from "./Navbar/Navbar";
-import UserList from "./ContactApp/UserList";
-import Product from "./ContactApp/Product";
+import Navbar from "./ContactApp/Navbar";
+import ContactApp from "./ContactApp/ContactApp";
 class App extends Component {
   render() {
     return (
       <div>
         <Navbar />
-        <UserList />
-        <hr />
-        <Product />
+        <ContactApp />
       </div>
     );
   }
