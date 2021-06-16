@@ -5,7 +5,7 @@ class ContactList extends Component {
     super(props);
   }
   selectedContact = (contact) => {
-    console.log(contact.name.first);
+    this.props.pullData(contact);
   };
   render() {
     return (

@@ -8,6 +8,7 @@ class ContactApp extends Component {
 
     this.state = {
       contacts: [],
+      selectedContact: {},
     };
   }
   componentDidMount() {
@@ -22,6 +23,10 @@ class ContactApp extends Component {
       })
       .catch();
   }
+  pullData = (contact) => {
+    console.log("Parent Comp: Method invoking & Name:", contact.name.first);
+    this.setState({ selectedContact: contact });
+  };
   render() {
     return (
       <React.Fragment>
@@ -29,10 +34,18 @@ class ContactApp extends Component {
           <div className="row">
             <div className="col-md-8">
               <h1>Contact App</h1>
-              <ContactList contacts={this.state.contacts} />
+              {/*    <pre>{JSON.stringify(this.state.selectedContact)}</pre> */}
+              <ContactList
+                contacts={this.state.contacts}
+                pullData={this.pullData}
+              />
             </div>
             <div className="col-md-4">
-              <ContactCard />
+              {Object.keys(this.state.selectedContact).length > 0 ? (
+                <React.Fragment>
+                  <ContactCard selectedContact={this.state.selectedContact} />
+                </React.Fragment>
+              ) : null}
             </div>
           </div>
         </div>
