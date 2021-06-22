@@ -1,0 +1,25 @@
+React Hooks(16.13/16.8)
+-----------------------
+function App(){
+	let x = 10;
+return <></>
+}
+
+class App extends R.C{
+    this.state = {
+	 x:10
+	
+	}
+	
+	render(){
+		return <></>
+	}
+}
+
+this.state = { }
+this.setState({ })
+
+this.state = { counter:1}
+this.setState({ counter:this.state.counter+1})
+----------------------------
+
