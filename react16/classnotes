@@ -21,5 +21,64 @@ this.setState({ })
 
 this.state = { counter:1}
 this.setState({ counter:this.state.counter+1})
+   - predefined
+   - auto merge option is there
 ----------------------------
+let [variable, function] = useState()
+let [a, setA] = useState(10);
+let [array, setArry] = useState([1,2,3]);
+let [counter, setCounter]= useState(1);
+let [message, setMessage]= useState("Hello")
+let [emp, setEmp]= useState({name:"Naraismha", age:37})
+--- auto merge option is not aviable.
 
+
+Class Test extends Component{
+constructor(){}
+	componentDidMount(){} //
+	componentWillUpdate(){}
+	componentWillUnMount(){}
+
+render(){}
+  return <></>
+}
+
+fuction Test(){
+	useEffect();
+return <></>
+}
+
+
+useEffect() ;  ---> componentDidMount(), 
+                    componentWillUpdate(),
+					componentWillUnMount()
+					
+					
+					
+useEffect(()=>{
+
+});               -- componentDidMount
+
+				
+useEffect(()=>{
+	       
+return ()=>{}   - componentWillUnMount
+});               
+
+				
+useEffect(()=>{
+	return ()=>{}
+}, []);               -- componentWillUpdate
+
+
+
+useEffect() - Hook will execute after return statement
+or component fully loaded.
+
+
+
+useEffect(()=>{
+	//side effect
+	Axio.get();
+	
+}, []);
