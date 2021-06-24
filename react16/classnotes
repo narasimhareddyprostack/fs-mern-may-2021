@@ -82,3 +82,21 @@ useEffect(()=>{
 	Axio.get();
 	
 }, []);
+
+
+-------------------------------------------------------------------
+Redux 
+-----
+Required Packages
+----------------------
+redux
+react-redux 
+redux-devtools-extension
+
+>npm i redux react-redux redux-devtools-extension
+
+note: Install crome browser - redux Devtools - extension
+
+
+ 	
+

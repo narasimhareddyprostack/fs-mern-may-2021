@@ -3,7 +3,7 @@ let Navbar = () => {
     <>
       <nav className="navbar navbar-dark bg-dark">
         <a href="#" className="navbar-brand">
-          React Hooks Example
+          React Redux Example
         </a>
       </nav>
     </>
