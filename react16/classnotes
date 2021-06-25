@@ -98,5 +98,44 @@ redux-devtools-extension
 note: Install crome browser - redux Devtools - extension
 
 
- 	
+React view    -->  action  --> reducer  --> store 
+Message.js 
 
+
+Component Data/own Data 
+ -
+ access and update - within the component
+ 
+How to declare component state as global - using state mgmt.
+
+
+1)View dispatch an redux action
+2) action will invoke reducer 
+  funciton action(){
+		return {type:"GM"}
+  }
+  --actionable object
+3.reducer will update/create new store based on action type.
+  reducer is pure funciton(it will take two parameters)
+  let reducer = (state,action)=>{
+  
+   //based on action type, reducer will update store               
+  }
+4.store- once store(states) is updated, it will reflect to view.
+
+
+
+How to dispatch an action in component?
+
+-- useDispatch()  hook  --react-redux 
+    import {useDispatch} from 'react-redux'
+	let dispatch = useDispatch();
+    dispatch(actionName())
+	
+How to read redux store ?
+-- useSelector() hooks 
+  import {useSelector} from 'react-reduxt'
+  
+  let storedata = useSelector( (state)=>{
+  return  state.message})
+  
