@@ -1,0 +1,85 @@
+Redux implimentation
+-----------------------
+Why We required Redux?
+
+Pre Requisits 
+1. Install Required Packages 
+
+> npm i redux react-redux redux-devtools-extension 
+
+2. Install crome extension 
+   Redux Developer tools 
+
+Step 1: Create React comp 
+Step 2: Create Redux Action
+Step 3: Create Redux reducer 
+Step 4: Create Redux Store 
+        Create rootReducer.js
+
+How to dispatch action?
+- useDispatch() hook - react-redux 
+ 
+  import {useDispatch} from 'react-redux';
+  
+  let dispatch = useDispatch();
+  
+  dispatch(orderAction())
+  
+What is Redux action?
+- function, It return actionalbe Object
+- invoking API/Consuming API
+- Action types 
+
+
+let orderAction = ()=>{
+
+return {  type:OrderSuccess, payload:orderData}
+} 
+//return actionalbe object
+
+Note: action - invoking reducer.
+
+what is redux reducer?
+-Its update the state(store) based on action type.
+-Reducer is Pure function?
+- What is pure function?
+
+funciton xyz(i){
+    
+	return  ++i;
+
+}
+xyz(10)
+xyz("Narasimha")
+
+We are predicting the result/return value
+
+let reducer  = (state = defaultState, action)=>{
+	//update state based on action type 
+}
+
+
+What is redux Store?
+collection of state's 
+{
+ user:{}
+ order:{}
+ message:{}
+ counter:{}
+ product:{}
+}
+
+createStore() - redux 
+------------------------
+import {createStore} from 'redux' 
+
+let store = createStore();
+export {store}
+
+
+
+
+
+
+
+

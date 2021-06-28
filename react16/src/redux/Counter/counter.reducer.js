@@ -1,5 +1,6 @@
 //import action types
 import { INCR, DECR } from "./counter.action";
+let counterKey = "counter";
 let couterState = {
   counter: 0,
 };
@@ -16,4 +17,4 @@ let counterReducer = (state = couterState, action) => {
       return state;
   }
 };
-export { counterReducer };
+export { counterReducer, counterKey };

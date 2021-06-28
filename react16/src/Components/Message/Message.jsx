@@ -1,16 +1,19 @@
 import React from "react";
-import { incrAction, decrAction } from "../../redux/Counter/counter.action";
 import { useDispatch, useSelector } from "react-redux";
-let Counter = () => {
-  let disaptch = useDispatch();
-  let counterData = useSelector((state) => {
-    return state.counter;
+import { gmAction, gnAction } from "../../redux/Message/message.action";
+let Message = () => {
+  //read store data
+  let messageData = useSelector((state) => {
+    return state.message;
   });
-  let incrHander = () => {
-    disaptch(incrAction());
+  let dispacth = useDispatch();
+  let gmHandler = () => {
+    //dispatch an action
+    dispacth(gmAction());
   };
-  let decrHander = () => {
-    disaptch(decrAction());
+  let gnHandler = () => {
+    //dispatch an action
+    dispacth(gnAction());
   };
   return (
     <>
@@ -18,22 +21,21 @@ let Counter = () => {
         <div className="row">
           <div className="col-md-6">
             <div className="card">
-              <div className="card-header">Counter:{counterData.counter}</div>
-              <pre>{JSON.stringify(counterData)}</pre>
+              <div className="card-header">Message : {messageData.message}</div>
               <div className="card-body">
                 <button
                   type="submit"
                   className="btn btn-success mr-4"
-                  onClick={incrHander}
+                  onClick={gmHandler}
                 >
-                  Incr
+                  Good Morning
                 </button>
                 <button
                   type="submit"
-                  className="btn btn-danger"
-                  onClick={decrHander}
+                  className="btn btn-dark"
+                  onClick={gnHandler}
                 >
-                  Decr
+                  Good Night
                 </button>
               </div>
             </div>
@@ -44,5 +46,4 @@ let Counter = () => {
     </>
   );
 };
-
-export default Counter;
+export default Message;
