@@ -1,21 +1,14 @@
 import React from "react";
-import Navbar from "./Navbar/Navbar";
-import Counter from "./Components/Counter/Counter";
-import Message from "./Components/Message/Message";
-import Product from "./Components/Product/Product";
-import { Provider } from "react-redux";
-import { store } from "./redux/store";
-function App() {
+import Navbar from "./git-clone/Navbar";
+
+import GitHubSearch from "./git-clone/GitHubSearch";
+let App = () => {
   return (
-    <div>
-      <Provider store={store}>
-        <Navbar />
-        <Product />
-        {/* <Counter />
-        <Message /> */}
-      </Provider>
-    </div>
+    <React.Fragment>
+      <Navbar />
+      <GitHubSearch />
+    </React.Fragment>
   );
-}
+};
 
 export default App;
