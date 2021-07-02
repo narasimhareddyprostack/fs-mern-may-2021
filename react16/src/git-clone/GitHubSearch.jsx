@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Axios from "axios";
 import GitProfile from "./GitProfile";
 import { clientId, clientSecret } from "./gitData";
+import GitRepos from "./GitHubRepos";
 let GitHubSearch = () => {
   let [userName, setUserName] = useState("");
   let [profile, setProfile] = useState({});
@@ -9,6 +10,7 @@ let GitHubSearch = () => {
   let searchUser = (event) => {
     event.preventDefault();
     profileSearch(userName);
+    repoSearch(userName);
   };
   let profileSearch = (userName) => {
     let url = `https://api.github.com/users/${userName}?clientId={clientId}&clientSecret={clientSecret}`;
@@ -22,7 +24,7 @@ let GitHubSearch = () => {
       });
   };
   let repoSearch = (userName) => {
-    let url = `https://api.github.com/users/${userName}/repos`;
+    let url = `https://api.github.com/users/${userName}/repos?clientId={clientId}&clientSecret={clientSecret}`;
     Axios.get(url)
       .then((response) => {
         setRepos(response.data);
@@ -67,7 +69,7 @@ let GitHubSearch = () => {
           </div>
         </div>
         <div className="row">
-          <pre>{JSON.stringify(profile)}</pre>
+          {/* <pre>{JSON.stringify(profile)}</pre> */}
           <div className="col">
             {Object.keys(profile).length > 0 ? (
               <>
@@ -78,11 +80,10 @@ let GitHubSearch = () => {
         </div>
         <div className="row">
           <div className="col">
-            <h3> Repos</h3>
+            <GitRepos repos={repos} />
           </div>
         </div>
       </div>
-      ;
     </React.Fragment>
   );
 };
